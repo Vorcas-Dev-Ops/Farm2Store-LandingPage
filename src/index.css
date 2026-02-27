@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: rgba(255, 253, 248, 0.9);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    @apply bg-bg text-text font-body antialiased;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  button {
+    @apply cursor-pointer outline-none font-body border-none;
+  }
+}
+
+@layer components {
+  .section-tag {
+    @apply inline-flex items-center gap-2 bg-green-light text-green-dark px-4 py-1.5 rounded-full font-heading text-[0.8rem] font-semibold tracking-widest uppercase mb-4 max-w-fit;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gradient-to-br from-green to-green-dark text-white font-heading font-semibold text-[0.95rem] px-7 py-3.5 rounded-full transition-all duration-350 ease-default relative overflow-hidden hover:-translate-y-0.5;
+    box-shadow: 0 4px 20px rgba(80, 200, 120, 0.35);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 8px 32px rgba(80, 200, 120, 0.45);
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-white/15 to-transparent opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-primary:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-transparent text-text font-heading font-semibold text-[0.95rem] px-7 py-[13px] rounded-full border-2 border-text/20 transition-all duration-350 ease-default hover:border-green hover:text-green-dark hover:-translate-y-0.5;
+  }
+
+  /* GSAP entrance animation target */
+  .reveal {
+    @apply opacity-0 translate-y-10;
+  }
+}
+
+/* ============================
+   CUSTOM SCROLLBAR
+   ============================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green rounded-full;
+}

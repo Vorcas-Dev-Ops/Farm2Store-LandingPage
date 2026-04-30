@@ -177,8 +177,9 @@ const Products = () => {
                                 >
                                     <img
                                         src={p.img}
-                                        alt={p.name}
+                                        alt={`Fresh ${p.name} banana variety`}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        loading="lazy"
                                     />
                                     <div
                                         className="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-40"

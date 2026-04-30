@@ -256,8 +256,9 @@ const Contact = () => {
                         <div className="absolute inset-0 z-0">
                             <img
                                 src="/images/b1.jpg"
-                                alt=""
+                                alt="Fresh yellow bananas background for contact form"
                                 className="w-full h-full object-cover opacity-100 grayscale-[0.2]"
+                                loading="lazy"
                             />
                             <div className="absolute inset-0 bg-gradient-to-br from-[#fffdf8]/40 via-[#fffdf8]/60 to-[#fffdf8]/80" />
                         </div>

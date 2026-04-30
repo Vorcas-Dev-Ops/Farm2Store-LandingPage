@@ -6,6 +6,7 @@ import Hero from './sections/Hero';
 import Products from './sections/Products';
 import About from './sections/About';
 import Contact from './sections/Contact';
+import Sitemap from './sections/Sitemap';
 import Footer from './sections/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,6 +57,7 @@ function App() {
                 <Products />
                 <About />
                 <Contact />
+                <Sitemap />
                 <Footer />
             </main>
         </div>

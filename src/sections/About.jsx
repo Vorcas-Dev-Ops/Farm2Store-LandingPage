@@ -157,8 +157,9 @@ const About = () => {
                         <div className="rounded-2xl h-[300px] md:h-[400px] w-full overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] relative transform-gpu will-change-transform" ref={imgRef}>
                             <img
                                 src="/images/wholesale.jpg"
-                                alt="Farm2Store Wholesale Operations"
+                                alt="Farm2Store wholesale banana supply chain and operations"
                                 className="w-full h-full object-cover"
+                                loading="lazy"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                         </div>

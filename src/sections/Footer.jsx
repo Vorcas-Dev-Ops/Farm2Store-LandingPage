@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const LINKS = {
     Platform: ['Download App'],
     Varieties: ['Robusta', 'Yelakki', 'Grand Naine'],
-    Company: ['About Us', 'Privacy Policy'],
+    Company: ['About Us', 'Site Map', 'Privacy Policy'],
     Contact: ['9741216533', 'farm2store26@gmail.com'],
 };
 
@@ -135,9 +135,9 @@ const Footer = () => {
                                                 if (item === 'Privacy Policy') {
                                                     e.preventDefault();
                                                     setIsPrivacyOpen(true);
-                                                } else if (item === 'About Us' || ['Robusta', 'Yelakki', 'Grand Naine'].includes(item)) {
+                                                } else if (item === 'About Us' || item === 'Site Map' || ['Robusta', 'Yelakki', 'Grand Naine'].includes(item)) {
                                                     e.preventDefault();
-                                                    const targetId = item === 'About Us' ? 'about' : 'products';
+                                                    const targetId = item === 'About Us' ? 'about' : item === 'Site Map' ? 'sitemap' : 'products';
                                                     document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
                                                 }
                                             }}

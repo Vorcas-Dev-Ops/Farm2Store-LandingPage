@@ -1,0 +1,14 @@
+# Farm2Store Robots.txt
+# Allows all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://farm2store.in/sitemap.xml
